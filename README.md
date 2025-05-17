@@ -44,10 +44,10 @@ NotesShare is a comprehensive educational platform designed to facilitate the fr
 ## Installation
 
 ### Web Version
-Simply visit [notesshare.wuaze.com](https://notesshare.wuaze.com) in any modern browser.
+Simply visit [notesshare.wuaze.com/welcome.php](https://notesshare.wuaze.com/welcome.php) in any modern browser.
 
 ### Progressive Web App (PWA)
-1. Open [notesshare.wuaze.com](https://notesshare.wuaze.com) in Chrome/Edge
+1. Open [notesshare.wuaze.com](https://notesshare.wuaze.com/welcome.php) in Chrome/Edge
 2. Click "Install" when prompted or:
 3. In Chrome: Menu → "Install NotesShare"
 4. On iOS: Safari → Share → "Add to Home Screen"
