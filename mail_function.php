@@ -55,25 +55,6 @@ function sendOTP($name, $email, $otp) {
         // Create a new PHPMailer instance
         $mail = new PHPMailer();
 
-        // Set mailer to use SMTP
-        $mail->isSMTP();  
-        $mail->SMTPDebug = 0;  // Disable verbose debugging
-        $mail->SMTPAuth = true; // Enable SMTP authentication
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL encryption
-        $mail->Port = 465; // Use the SMTP port for SSL (465)
-        
-        // SMTP server configuration
-        $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
-        $mail->Username = 'charleceegraphix@gmail.com'; // Your email address (SMTP username)
-        $mail->Password = 'veiz tbpo kwta rqvr'; // Your app password or email password
-        $mail->SetFrom('charleceegraphix@gmail.com', 'NotesShare'); // Sender's email and name
-        $mail->AddAddress($email); // Recipient's email address
-        $mail->addReplyTo('charleceegraphix@gmail.com', 'No Reply'); // Disable email replies
-
-        // Set email subject and body
-        $mail->Subject = "Verify Your Email Address";
-        $mail->MsgHTML($message_body);
-        $mail->isHTML(true);
 
         // Send email
         if ($mail->send()) {
