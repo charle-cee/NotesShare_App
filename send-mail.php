@@ -25,21 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     }
 
     try {
-        $mail = new PHPMailer(true);
-
-        $mail->isSMTP();
-        $mail->SMTPDebug = 0;
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = 465;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->SMTPAuth = true;
-        $mail->Username = 'charleceegraphix@gmail.com';
-        $mail->Password = 'veiz tbpo kwta rqvr';
-
-        $mail->setFrom('charleceegraphix@gmail.com', 'NotesShare');
-        $mail->addAddress($email);
-        $mail->addReplyTo('charleceegraphix@gmail.com', 'No Reply');
-        $mail->isHTML(true);
+        $mail = new PHPMailer(true)
 
         if ($verified === 'yes') {
             $mail->Subject = "Welcome to NotesShare – Account Verified";
