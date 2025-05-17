@@ -69,21 +69,7 @@ $statusColor = $action === 'approve' ? '#4CAF50' : '#F44336'; // Green for appro
 try {
     $mail = new PHPMailer(true);
 
-    // SMTP Configuration (move these to config.php in production)
-    $mail->isSMTP();
-    $mail->SMTPDebug = 0;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 465;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->SMTPAuth = true;
-    $mail->Username = 'charleceegraphix@gmail.com'; // Replace with your email
-    $mail->Password = 'veiz tbpo kwta rqvr';      // Replace with your app password
-
-    // Sender and recipient
-    $mail->setFrom('charleceegraphix@gmail.com', 'NotesShare Admin');
-    $mail->addAddress($email, $name);
-    $mail->addReplyTo('no-reply@notesshare.com', 'No Reply');
-
+    
     // Email content
     $mail->isHTML(true);
     $mail->Subject = "Your Note Has Been " . ucfirst($statusText);
